@@ -50,21 +50,56 @@ function checkAnswer(selected) {
   }
 
   document.getElementById('score').innerText = `Punktestand: ${score}`;
+
+  // "Nächste Frage"-Button einblenden
+  document.getElementById('next-btn').style.display = 'inline-block';
+
 }
 
 function resetUI() {
   const optionsDiv = document.getElementById('options');
   optionsDiv.innerHTML = '';
   document.getElementById('question').innerText = '';
+  document.getElementById('next-btn').style.display = 'none'; // Button verstecken
 }
+
 
 function nextQuestion() {
   current++;
+
   if (current < questions.length) {
     resetUI();
     showQuestion();
   } else {
-    document.getElementById('quiz-container').innerHTML =
-      `<h2>Fertig! Dein Punktestand: ${score}/${questions.length}</h2>`;
+    showFinalResult();
   }
 }
+
+function showFinalResult() {
+  const quizCard = document.querySelector('.quiz-card');
+  quizCard.innerHTML = `
+    <h2>Fertig!</h2>
+    <p>Dein Punktestand: ${score} von ${questions.length}</p>
+    <button onclick="restartQuiz()">Quiz neu starten</button>
+  `;
+}
+
+
+function restartQuiz() {
+  current = 0;
+  score = 0;
+
+  // Originales Layout wiederherstellen
+  const quizCard = document.querySelector('.quiz-card');
+  quizCard.innerHTML = `
+    <h1>Quiz</h1>
+    <p id="question"></p>
+    <div id="options" class="options-grid"></div>
+    <p id="score">Punktestand: 0</p>
+    <button id="next-btn" onclick="nextQuestion()" style="display:none;">Nächste Frage</button>
+  `;
+
+  // Quiz starten
+  showQuestion();
+}
+

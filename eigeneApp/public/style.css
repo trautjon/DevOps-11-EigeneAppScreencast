@@ -29,3 +29,76 @@ button {
   background-color: crimson;
   color: white;
 }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.quiz-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.correct-flash {
+  background-color: limegreen;
+  color: white;
+  animation: flash 0.5s;
+}
+
+@keyframes flash {
+  0% { background-color: white; color: black; }
+  50% { background-color: limegreen; color: white; }
+  100% { background-color: white; color: black; }
+}
+
+.wrong {
+  background-color: crimson;
+  color: white;
+}
+

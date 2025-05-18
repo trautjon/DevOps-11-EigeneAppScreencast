@@ -6,13 +6,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Quiz</h1>
-  <div id="quiz-container">
-    <p id="question"></p>
-    <div id="options"></div>
-    <p id="score">Punktestand: 0</p>
-    <button onclick="nextQuestion()">Nächste Frage</button>
+  <div class="quiz-wrapper">
+    <div class="quiz-card">
+      <h1>Quiz</h1>
+      <p id="question"></p>
+      <div id="options" class="options-grid"></div>
+      <p id="score">Punktestand: 0</p>
+      <button id="next-btn" onclick="nextQuestion()" style="display:none;">Nächste Frage</button>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
-</html>
