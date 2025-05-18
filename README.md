@@ -98,9 +98,32 @@ Um einen Teil von Continuous Integration umzusetzen wird Docker build und das Pu
 
 Für dieses Projekt habe ich mich für Jenkins entschieden (Da es einen besseren Einblick in die Vorgänge gibt).
 
+#### Jenkins Projekt: QuizAppDockerBuild
 
+In diesem Jenkinsprojekt werden folgende Schritte unternommen:
+
+- Das Image trautjon/jonas-quiz-app wird mittels Dockerfile zusammengebaut.
+- Das Image wird als Container gestartet
+- Vorherige Container werden gelöscht
+- Es wird auf die Verfügbarkeit des Webservices mittels Port gewartet
+
+#### Jenkins Projekt: QuizAppDockerPushOnHub
+
+In diesem Jenkinsprojekt werden folgende Schritte unternommen:
+
+- Das lokale Image wird geholt
+- Ein Login auf Dockerhub findet statt
+- Das Image wird auf trautjon/jonas-quiz-app:latest gepusht
 
 ### 5. Deployment
+
+Für das Deployment habe ich wieder Render.com verwendet, da dies einfacher aufzusetzen und zu verwalten ist als Azure.
+
+#### Jenkins Projekt: QuizAppDockerPushOnHub
+
+In diesem Jenkinsprojekt werden folgende Schritte unternommen:
+
+- Render.com wird mittels Webhook getriggert das neuste trautjon/jonas-quiz-app:latest zu deployen
 
 ## 🧠 Nice to know
 
