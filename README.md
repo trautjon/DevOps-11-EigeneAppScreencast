@@ -120,7 +120,7 @@ In diesem Jenkinsprojekt werden folgende Schritte unternommen:
 
 Für das Deployment habe ich wieder Render.com verwendet, da dies einfacher aufzusetzen und zu verwalten ist als Azure.
 
-#### Jenkins Projekt: QuizAppDockerPushOnHub
+#### Jenkins Projekt: QuizAppRenderDeployment
 
 In diesem Jenkinsprojekt werden folgende Schritte unternommen:
 
