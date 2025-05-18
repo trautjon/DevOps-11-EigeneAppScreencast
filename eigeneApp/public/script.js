@@ -2,6 +2,8 @@ let questions = [];
 let current = 0;
 let score = 0;
 
+document.title = "Quiz App von Jonas";
+
 fetch('/api/questions')
   .then(res => res.json())
   .then(data => {
