@@ -16,7 +16,7 @@ Ich möchte damit die wesentlichen Lerneffekte von DevOps verfestigen und diesen
 
 nutzen, um meinen Screencast aufzuwerten.
 
-## Entwicklung EigeneApp
+## Entwicklung EigeneApp (Quiz)
 
 
 

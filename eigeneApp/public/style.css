@@ -1,0 +1,31 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.correct-flash {
+  background-color: limegreen;
+  color: white;
+  animation: flash 0.5s;
+}
+
+@keyframes flash {
+  0% { background-color: white; color: black; }
+  50% { background-color: limegreen; color: white; }
+  100% { background-color: white; color: black; }
+}
+
+.wrong {
+  background-color: crimson;
+  color: white;
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "question": "Was ist die Hauptstadt von Deutschland?",
+    "options": ["Berlin", "München", "Köln", "Hamburg"],
+    "answer": "Berlin"
+  },
+  {
+    "question": "Welche Sprache wird in Brasilien gesprochen?",
+    "options": ["Spanisch", "Portugiesisch", "Französisch", "Englisch"],
+    "answer": "Portugiesisch"
+  }
+]
