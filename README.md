@@ -102,7 +102,8 @@ Für dieses Projekt habe ich mich für Jenkins entschieden (Da es einen besseren
 
 In diesem Jenkinsprojekt werden folgende Schritte unternommen:
 
-- Das Image trautjon/jonas-quiz-app wird mittels Dockerfile zusammengebaut.
+- Führt ein Jest Test mit Coverage (jest --coverage) aus
+- Das Image trautjon/jonas-quiz-app wird mittels Dockerfile zusammengebaut
 - Das Image wird als Container gestartet
 - Vorherige Container werden gelöscht
 - Es wird auf die Verfügbarkeit des Webservices mittels Port gewartet
